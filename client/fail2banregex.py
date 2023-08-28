@@ -464,7 +464,7 @@ class Fail2banRegex(object):
 					regex = self._failregex[match[0]]
 					regex.inc()
 					regex.appendIP(match)
-				if not match[3].get('nofail'):
+				if match[3]:
 					ret.append(match)
 				else:
 					is_ignored = True
